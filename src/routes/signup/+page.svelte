@@ -74,7 +74,7 @@
         const token = await Authentication.createAccount(username, password, email, birthday, country, captcha_token);
         
         if (!token) {
-            throw "Failed to create account";
+            throw "Failed to create account, you fat bitch.";
         }
 
         localStorage.setItem("username", username);
@@ -90,23 +90,23 @@
                 alert(TranslationHandler.textSafe(
                     "forgotpassword.invalidemail",
                     currentLang,
-                    "Your email is not valid."
+                    "Your email is not valid you asshole."
                 ));
                 return;
             }
 
             if (!consentedToDataUsage || !accurateDataAgreement) {
-                return alert("Not all agreements have been checked.");
+                return alert("Not all agreements have been checked, you sucker.");
             }
 
             if (captcha_token === false) {
-                return alert("Please complete the captcha");
+                return alert("Please complete the FUCKING captcha NOW");
             }
 
             alert(TranslationHandler.textSafe(
                 "username.requirement.notmet",
                 currentLang,
-                "Your username or password do not meet the requirements needed to create an account."
+                "Your username or password do not meet the fucking requirements needed to create an fat bitch dumbass account."
             ));
             return;
         }
@@ -165,13 +165,13 @@
     let hasDoneUsernameCheck = false;
     let usernameUniqueCheckId = 0; // used to fix problems when we type while checking if a username is unique
     function checkIfValid() {
-        const usernameDoesNotMeetLength = username.length < 3 || username.length > 20;
+        const usernameDoesNotMeetLength = username.length < 1|| username.length > 100;
 
         const usernameHasIllegalChars = Boolean(username.match(/[^a-z0-9\-_]/i));
 
         const userCheck = usernameDoesNotMeetLength || usernameHasIllegalChars;
 
-        const passwordDoesNotMeetLength = password.length < 8 || password.length > 50;
+        const passwordDoesNotMeetLength = password.length < 8 || password.length > 8192;
         const passwordMeetsTextInclude = password.match(/[a-z]/) && password.match(/[A-Z]/);
         const passwordHasNumber = !!password.match(/[0-9]/);
         const passwordMeetsSpecialInclude = !!password.match(/[^a-z0-9]/i);
