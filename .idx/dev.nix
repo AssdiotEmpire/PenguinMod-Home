@@ -4,8 +4,8 @@
     pkgs.nodejs_20
   ];
   env = {
-    PUBLIC_API_URL="https://projects.penguinmod.com";
-    PUBLIC_STUDIO_URL="https://studio.penguinmod.com";
+    PUBLIC_API_URL="https://projects.fuckenguinmod.com";
+    PUBLIC_STUDIO_URL="https://studio.fuckenguinmod.com";
   };
   idx.extensions = [
     "svelte.svelte-vscode"
